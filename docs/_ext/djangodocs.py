@@ -19,6 +19,12 @@ from sphinx.util import logging
 from sphinx.util.console import bold
 from sphinx.writers.html import HTMLTranslator
 
+from docutils import nodes
+from docutils.parsers import rst
+from docutils import statemachine
+import sphinx
+from sphinx.builders.html import StandaloneHTMLBuilder
+
 logger = logging.getLogger(__name__)
 # RE for option descriptions without a '--' prefix
 simple_option_desc_re = re.compile(r"([-_a-zA-Z0-9]+)(\s*.*?)(?=,\s+(?:/|-|--)|$)")
